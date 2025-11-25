@@ -8,7 +8,7 @@ export default function BusinessCard() {
   const name = "Cas Pouw";
   const title = "Crowdflow specialist";
   const description =
-    "I’m speicalized in understanding and optimizing crowd environments. If you’re facing a challenge related to pedestrian flows, I’d love to explore how we can solve it together.";
+    "I’m specialized in understanding and optimizing crowd environments. If you’re facing a challenge related to pedestrian flows, I’d love to explore how we can solve it together.";
   const myEmail = "cas.pouw@proton.me";
   const myBusiness = "In development";
   return (
