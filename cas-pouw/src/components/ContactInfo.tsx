@@ -16,7 +16,10 @@ export default function ContactInfo({
       avatar={icon}
       title={title}
       subheader={subheader}
-      sx={{ textAlign: "left" }}
+      sx={{ textAlign: "left", my: 0.5, py: 0.5 }}
+      slotProps={{
+        title: { style: { fontSize: "1.1rem", fontWeight: 500 } },
+      }}
     />
   );
 }
