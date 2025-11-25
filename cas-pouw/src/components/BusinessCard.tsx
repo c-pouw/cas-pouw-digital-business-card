@@ -4,9 +4,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ContactInfo from "./ContactInfo";
 import { Mail, Business, LocationPin } from "@mui/icons-material";
-import profilePic from "../../dist/assets/Cas_Pouw_square.jpg";
-// You can replace this with another image if you want a different header
-import headerImg from "../../dist/assets/cover.jpg";
+import profilePic from "../assets/Cas_Pouw_square.jpg";
+import headerImg from "../assets/cover.jpg";
 
 export default function BusinessCard() {
   const name = "dr. Cas Pouw";
