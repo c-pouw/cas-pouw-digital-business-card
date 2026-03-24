@@ -26,9 +26,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
   background-color: #bacfdb;
+  box-sizing: border-box;
 }
 
 h1 {

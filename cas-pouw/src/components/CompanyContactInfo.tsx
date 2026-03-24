@@ -19,7 +19,7 @@ export default function CompanyContactInfo({
       avatar={icon}
       title={companyName}
       subheader={
-        <Box sx={{ fontSize: "0.875rem" }}>
+        <Box sx={{ fontSize: "0.875rem", overflowWrap: "break-word", wordBreak: "break-word" }}>
           <div>{functionName}</div>
           <div>{email}</div>
         </Box>

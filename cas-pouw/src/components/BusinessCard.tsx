@@ -23,7 +23,7 @@ export default function BusinessCard() {
   const prorailEmail = "cas.pouw@prorail.nl";
   const tueEmail = "c.a.s.pouw@tue.nl";
   return (
-    <div style={{ position: "relative", width: 400, margin: "0 auto" }}>
+    <div style={{ position: "relative", width: "min(400px, calc(100vw - 32px))", margin: "0 auto" }}>
       <img
         src={profilePic}
         alt="Profile"
@@ -35,7 +35,7 @@ export default function BusinessCard() {
           border: "3px solid #fff",
           boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
           position: "absolute",
-          left: 230,
+          left: "calc(100% - 162px)",
           top: 60,
           zIndex: 2,
           background: "#fff",
@@ -44,6 +44,7 @@ export default function BusinessCard() {
       <Card
         sx={{
           maxWidth: 400,
+          width: "100%",
           backgroundColor: "#f0f0f0",
           borderRadius: "16px",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -54,7 +55,7 @@ export default function BusinessCard() {
         <div
           style={{
             width: "100%",
-            height: 160,
+            height: "clamp(120px, 40vw, 160px)",
             overflow: "hidden",
             position: "relative",
           }}
@@ -64,7 +65,7 @@ export default function BusinessCard() {
             alt="Header"
             style={{
               width: "100%",
-              height: 160,
+              height: "clamp(120px, 40vw, 160px)",
               objectFit: "cover",
               display: "block",
             }}
@@ -75,7 +76,7 @@ export default function BusinessCard() {
             gutterBottom
             variant="h4"
             component="div"
-            sx={{ textAlign: "left", mb: 0 }}
+            sx={{ textAlign: "left", mb: 0, fontSize: { xs: "1.6rem", sm: "2.125rem" } }}
           >
             {name}
           </Typography>
