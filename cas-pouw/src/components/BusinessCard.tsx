@@ -44,7 +44,7 @@ export default function BusinessCard() {
           border: "3px solid #fff",
           boxShadow: "0 2px 8px rgba(0,0,0,0.12)",
           position: "absolute",
-          left: 200,
+          left: 230,
           top: 60,
           zIndex: 2,
           background: "#fff",
