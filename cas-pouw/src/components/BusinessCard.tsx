@@ -2,12 +2,8 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ContactInfo from "./ContactInfo";
 import CompanyContactInfo from "./CompanyContactInfo";
 import {
-  Mail,
-  Business,
-  LocationPin,
   LinkedIn,
   GitHub,
   Search,
@@ -15,7 +11,6 @@ import {
   Train,
   Science,
   Book,
-  Phone,
 } from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -25,12 +20,8 @@ import headerImg from "../assets/cover.jpg";
 export default function BusinessCard() {
   const name = "Dr. Cas Pouw";
   const title = "Crowdflow specialist";
-  // const description =
-    // "If you’re facing a challenge related to crowd flows, I’d love to explore how we can solve it together.";
   const prorailEmail = "cas.pouw@prorail.nl";
   const tueEmail = "c.a.s.pouw@tue.nl";
-  // const myBusiness = "In development";
-  // const myLocation = "'s-Hertogenbosch";
   return (
     <div style={{ position: "relative", width: 400, margin: "0 auto" }}>
       <img
@@ -98,8 +89,6 @@ export default function BusinessCard() {
           </Typography>
           <CompanyContactInfo companyName="ProRail Stations" functionName="Beleidsadviseur transferveiligheid" email={prorailEmail} icon={<Train />}/>
           <CompanyContactInfo companyName="Eindhoven University of Technology" functionName="Postdoctoraal onderzoeker" email={tueEmail} icon={<School />} />
-          {/* <ContactInfo title="Phone" subheader="+31 6 16622507" icon={<Phone />} /> */}
-          {/* Social Buttons Row */}
           <Box mt={3} display="flex" justifyContent="center" gap={2}>
             <Tooltip title="LinkedIn">
               <IconButton
