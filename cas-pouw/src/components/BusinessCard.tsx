@@ -3,6 +3,7 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import ContactInfo from "./ContactInfo";
+import CompanyContactInfo from "./CompanyContactInfo";
 import {
   Mail,
   Business,
@@ -11,6 +12,10 @@ import {
   GitHub,
   Search,
   School,
+  Train,
+  Science,
+  Book,
+  Phone,
 } from "@mui/icons-material";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -18,15 +23,16 @@ import profilePic from "../assets/Cas_Pouw_square.jpg";
 import headerImg from "../assets/cover.jpg";
 
 export default function BusinessCard() {
-  const name = "dr. Cas Pouw";
+  const name = "Dr. Cas Pouw";
   const title = "Crowdflow specialist";
-  const description =
-    "If you’re facing a challenge related to crowd flows, I’d love to explore how we can solve it together.";
-  const myEmail = "cas.pouw@proton.me";
-  const myBusiness = "In development";
-  const myLocation = "Eindhoven";
+  // const description =
+    // "If you’re facing a challenge related to crowd flows, I’d love to explore how we can solve it together.";
+  const prorailEmail = "cas.pouw@prorail.nl";
+  const tueEmail = "c.a.s.pouw@tue.nl";
+  // const myBusiness = "In development";
+  // const myLocation = "'s-Hertogenbosch";
   return (
-    <div style={{ position: "relative", width: 365, margin: "0 auto" }}>
+    <div style={{ position: "relative", width: 400, margin: "0 auto" }}>
       <img
         src={profilePic}
         alt="Profile"
@@ -46,7 +52,7 @@ export default function BusinessCard() {
       />
       <Card
         sx={{
-          maxWidth: 365,
+          maxWidth: 400,
           backgroundColor: "#f0f0f0",
           borderRadius: "16px",
           boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
@@ -86,27 +92,13 @@ export default function BusinessCard() {
             gutterBottom
             variant="h6"
             component="div"
-            sx={{ textAlign: "left", mt: 0, mb: 3 }}
+            sx={{ textAlign: "left", mt: 0, mb: 2, fontWeight: 'normal' }}
           >
             {title}
           </Typography>
-          <Typography
-            variant="body2"
-            sx={{ color: "text.secondary", textAlign: "left", marginBottom: 3 }}
-          >
-            {description}
-          </Typography>
-          <ContactInfo title={myEmail} subheader="Email" icon={<Mail />} />
-          <ContactInfo
-            title={myBusiness}
-            subheader="Business"
-            icon={<Business />}
-          />
-          <ContactInfo
-            title={myLocation}
-            subheader="Location"
-            icon={<LocationPin />}
-          />
+          <CompanyContactInfo companyName="ProRail Stations" functionName="Beleidsadviseur transferveiligheid" email={prorailEmail} icon={<Train />}/>
+          <CompanyContactInfo companyName="Eindhoven University of Technology" functionName="Postdoctoraal onderzoeker" email={tueEmail} icon={<School />} />
+          {/* <ContactInfo title="Phone" subheader="+31 6 16622507" icon={<Phone />} /> */}
           {/* Social Buttons Row */}
           <Box mt={3} display="flex" justifyContent="center" gap={2}>
             <Tooltip title="LinkedIn">
@@ -154,7 +146,19 @@ export default function BusinessCard() {
                 color="primary"
                 aria-label="Research Profile"
               >
-                <School />
+                <Science />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="PhD thesis">
+              <IconButton
+                component="a"
+                href="https://research.tue.nl/en/publications/human-crowd-flows-physics-insights-from-real-life-measurements/"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="primary"
+                aria-label="PhD thesis"
+              >
+                <Book />
               </IconButton>
             </Tooltip>
           </Box>
