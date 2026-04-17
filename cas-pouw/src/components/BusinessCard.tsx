@@ -88,7 +88,7 @@ export default function BusinessCard() {
           >
             {title}
           </Typography>
-          <CompanyContactInfo companyName="ProRail Stations" functionName="Beleidsadviseur transferveiligheid" email={prorailEmail} icon={<Train />}/>
+          <CompanyContactInfo companyName="ProRail Stations" functionName="Data Scientist" email={prorailEmail} icon={<Train />}/>
           <CompanyContactInfo companyName="Eindhoven University of Technology" functionName="Postdoctoraal onderzoeker" email={tueEmail} icon={<School />} />
           <Box mt={3} display="flex" justifyContent="center" gap={2}>
             <Tooltip title="LinkedIn">
